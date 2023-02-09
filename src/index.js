@@ -25,8 +25,14 @@ const navElements = document.querySelectorAll(".nav");
 navElements.forEach((nav) => {
   nav.addEventListener("click", handleNavClick);
 });
-function handleNavClick(event) {
-  const destination = event.target.dataset.destination;
+function handleNavClick(event, initialDestination) {
+  let destination = "";
+  if (event === undefined) {
+    destination = initialDestination;
+  } else {
+    destination = event.target.dataset.destination;
+  }
+  console.log(event);
   switch (destination) {
     case "home":
       mainContentDiv.innerHTML = "";
@@ -47,3 +53,4 @@ function handleNavClick(event) {
 }
 
 mainContentDiv.appendChild(HomePage());
+handleNavClick(undefined, "home");
