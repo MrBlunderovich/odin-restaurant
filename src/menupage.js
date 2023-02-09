@@ -22,8 +22,12 @@ export default function mainpage() {
     Installing <em>webpack-dev-server</em> and choosing what browser to open page in
   </li>
   <li>
-    Addind <em>inline-source-map</em> to webpack config
+    Adding <em>inline-source-map</em> to webpack config
   </li>
+  <li>
+    Running <em>git subtree push --prefix dist origin gh-pages</em> in terminal to deploy project on github-pages from non-standard 'dist' directory
+  </li>
+
     `;
 
   return mainContentDiv;
