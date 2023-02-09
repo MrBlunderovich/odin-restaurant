@@ -44,9 +44,14 @@ header > div.nav {
   font-size: 1.5rem;
   cursor: pointer;
 }
-.nav.active {
+.nav.active,
+.nav:hover {
   transform: scale(1.1);
   font-weight: 700;
+}
+header:hover .active:not(:hover) {
+  transform: none;
+  font-weight: normal;
 }
 main {
   grid-row: 3;
