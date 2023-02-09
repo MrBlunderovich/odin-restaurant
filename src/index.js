@@ -32,19 +32,25 @@ function handleNavClick(event, initialDestination) {
   } else {
     destination = event.target.dataset.destination;
   }
-  console.log(event);
+  navElements.forEach((nav) => {
+    nav.classList.remove("active");
+  });
+
   switch (destination) {
     case "home":
       mainContentDiv.innerHTML = "";
       mainContentDiv.appendChild(HomePage());
+      document.querySelector(".nav-home").classList.add("active");
       break;
     case "menu":
       mainContentDiv.innerHTML = "";
       mainContentDiv.appendChild(MenuPage());
+      document.querySelector(".nav-menu").classList.add("active");
       break;
     case "contacts":
       mainContentDiv.innerHTML = "";
       mainContentDiv.appendChild(ContactPage());
+      document.querySelector(".nav-contacts").classList.add("active");
       break;
 
     default:

@@ -44,6 +44,10 @@ header > div.nav {
   font-size: 1.5rem;
   cursor: pointer;
 }
+.nav.active {
+  transform: scale(1.1);
+  font-weight: 700;
+}
 main {
   grid-row: 3;
   display: flex;
