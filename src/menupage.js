@@ -27,6 +27,9 @@ export default function mainpage() {
   <li>
     Running <em>git subtree push --prefix dist origin gh-pages</em> in terminal to deploy project on github-pages from non-standard 'dist' directory
   </li>
+  <li>
+    Running <em>npm run build</em> to create js bundle file in dist folder (somehow webpack-server runs ok without doing so)
+  </li>
 
     `;
 
